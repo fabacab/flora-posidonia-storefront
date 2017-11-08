@@ -1,0 +1,39 @@
+/**
+ * The child theme for Flora Posidonia's use of WooCommerce Storefront.
+ *
+ * WordPress Theme Header information:
+ *
+ * * Theme Name: Flora Posidonia Storefront
+ * * Theme URI: https://github.com/meitar/flora-posidonia-storefront
+ * * Description: Flora Posidonia Storefront
+ * * Author: Maymay
+ * * Author URI: https://maymay.net/
+ * * Template: storefront
+ * * Version: 0.1
+ */
+
+/**
+ * @group Product images.
+ */
+.product.outofstock a[class^="woocommerce"] img {
+    margin-left: -9999px
+}
+.product.outofstock a[class^="woocommerce"] {
+    position: relative;
+}
+.product.outofstock a[class^="woocommerce"]::after {
+    content: "On Backorder \3C 3";
+    color: black;
+    font-size: 2.5em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 75%;
+    border: 1px dashed black;
+    padding: 1em;
+}
+.storefront-full-width-content .product.outofstock a[class^="woocommerce"]::after {
+    height: 100%;
+}
